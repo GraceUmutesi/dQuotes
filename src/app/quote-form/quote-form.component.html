@@ -1,7 +1,7 @@
 <div class="jumbotron">
     <h2>Add a quote</h2>
     <div>
-        <form  #addingForm='ngForm'>
+        <form #addingForm='ngForm'>
             <div class="form-group">
                 <label for="quoteStatement">Quote</label>
                 <textarea class="form-control" id="statement" rows="4" [(ngModel)]="newQuote.statement" name="statement"
@@ -26,6 +26,7 @@
                     <p>Your Name is required</p>
                 </div>
             </div>
+            <button type="submit" class="btn btn-outline-success">Add</button>
         </form>
     </div>
 
