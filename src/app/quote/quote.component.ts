@@ -13,9 +13,12 @@ export class QuoteComponent implements OnInit {
     new Quote(3,"You can’t wait for inspiration. You have to go after it with a club.","-Jack London","Grace"),
     new Quote(4,"Taking care of yourself makes you stronger for everyone in your life including you.","-Kelly Rudolph","Grace"),
     new Quote(5,"Faith is taking the first step even when you don't see the full staircase","-Martin Luther King","Grace"),
-
-  
-  ]
+ ];
+ addNewQuote(qs){
+  let quoteLength = this.myQuotes.length;
+  qs.id = quoteLength+1;
+  this.myQuotes.push(qs)
+}
 
 
   constructor() { }

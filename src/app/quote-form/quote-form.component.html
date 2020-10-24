@@ -1,7 +1,7 @@
 <div class="jumbotron">
     <h2>Add a quote</h2>
     <div>
-        <form #addingForm='ngForm'>
+        <form (ngSubmit)='submitQuote()' #addingForm='ngForm'>
             <div class="form-group">
                 <label for="quoteStatement">Quote</label>
                 <textarea class="form-control" id="statement" rows="4" [(ngModel)]="newQuote.statement" name="statement"
