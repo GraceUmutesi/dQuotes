@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-quote-vote',
@@ -6,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-vote.component.css']
 })
 export class QuoteVoteComponent implements OnInit {
-  // img1:string="assets/images/ThumbsUp.png";
-  // img2:string="assets/images/ThumbsDown.png"
   
+ 
   
   likes:number=0;
   dislikes:number=0;

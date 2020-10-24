@@ -4,12 +4,12 @@
         <div class="col-md-7">
             <h2>Inspirational quotes</h2>
             <hr>
-            <div *ngFor='let aquote of myQuotes'>
+            <div *ngFor='let aquote of myQuotes;let i=index'>
                 <p>{{aquote.statement}}</p>
                 <div class="row">
                     <div class="col-md-8">
-                        <button>View more</button>
-                        <div>
+                        <button (click)='toggleDetails(i)'>View more</button>
+                        <div *ngIf='aquote.showVotes'>
                             <app-quote-vote></app-quote-vote>
                         </div>
                     </div>

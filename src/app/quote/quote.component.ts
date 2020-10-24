@@ -19,7 +19,9 @@ export class QuoteComponent implements OnInit {
   qs.id = quoteLength+1;
   this.myQuotes.push(qs)
 }
-
+toggleDetails(index) {
+  this.myQuotes[index].showVotes = !this.myQuotes[index].showVotes;
+}
 
   constructor() { }
 
