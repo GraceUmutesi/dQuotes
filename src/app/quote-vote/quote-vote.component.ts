@@ -1,5 +1,6 @@
 
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quote-vote',
@@ -8,6 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class QuoteVoteComponent implements OnInit {
   
+ @Input() quote:Quote
  @Output() toDelete = new EventEmitter<Boolean>();
 
  quoteDelete(complete:boolean){
