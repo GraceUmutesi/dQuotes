@@ -10,7 +10,7 @@
                     <div class="col-md-8">
                         <button (click)='toggleDetails(i)'>View more</button>
                         <div *ngIf='aquote.showVotes'>
-                            <app-quote-vote></app-quote-vote>
+                            <app-quote-vote (toDelete)='deleteQuote($event,i)'></app-quote-vote>
                         </div>
                     </div>
                     <div class="col-md-4">

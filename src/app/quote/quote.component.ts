@@ -19,6 +19,15 @@ export class QuoteComponent implements OnInit {
   qs.id = quoteLength+1;
   this.myQuotes.push(qs)
 }
+deleteQuote(toDelete,index){
+  if (toDelete) {
+    let delQuote = confirm(`Are you sure you want to delete ${this.myQuotes[index].statement}?`)
+
+    if (delQuote){
+      this.myQuotes.splice(index,1)
+    }
+  }
+}
 toggleDetails(index) {
   this.myQuotes[index].showVotes = !this.myQuotes[index].showVotes;
 }
