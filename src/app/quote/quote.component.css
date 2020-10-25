@@ -1,3 +1,9 @@
+.contain{
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    
+}
 .mTitle{
     text-align: center;
     padding: 4%;

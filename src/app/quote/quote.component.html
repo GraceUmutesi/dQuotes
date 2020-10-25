@@ -1,27 +1,28 @@
-<h1 class="mTitle">Quotes for your Day</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-md-7">
-            <h2>Inspirational quotes</h2>
-            <hr>
-            <div *ngFor='let aquote of myQuotes;let i=index'>
-                <p>{{aquote.statement}}</p>
-                <div class="row">
-                    <div class="col-md-8">
-                        <button (click)='toggleDetails(i)'>View more</button>
-                        <div *ngIf='aquote.showVotes'>
-                            <app-quote-vote (toDelete)='deleteQuote($event,i)'></app-quote-vote>
+<div [ngStyle]="{backgroundImage:'url(./assets/back2.jpg)'}" class="contain">
+    <h1 class="mTitle">Quotes for your Day</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Inspirational quotes</h2>
+                <hr>
+                <div *ngFor='let aquote of myQuotes;let i=index'>
+                    <p>{{aquote.statement}}</p>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <button (click)='toggleDetails(i)'>View more</button>
+                            <div *ngIf='aquote.showVotes'>
+                                <app-quote-vote (toDelete)='deleteQuote($event,i)'></app-quote-vote>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <p>{{aquote.author}}</p>
+                        <div class="col-md-4">
+                            <p>{{aquote.author}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-5">
-            <app-quote-form (emitQuote)="addNewQuote($event)"></app-quote-form>
+            <div class="col-md-5">
+                <app-quote-form (emitQuote)="addNewQuote($event)"></app-quote-form>
+            </div>
         </div>
     </div>
 </div>
-

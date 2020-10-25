@@ -12,7 +12,7 @@ export class QuoteVoteComponent implements OnInit {
 
  quoteDelete(complete:boolean){
   this.toDelete.emit(complete);
-}
+ }
   
   likes:number=0;
   dislikes:number=0;
