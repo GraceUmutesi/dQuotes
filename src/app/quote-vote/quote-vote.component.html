@@ -1,14 +1,26 @@
+<br>
 <div class="row">
     <div class="col-md-6" >
-        <p>{{likes}}</p>
-        <img  class="imgs" (click)='likeBtn()' src="assets/thumbsup.png" alt="Thumbs Up">
+        <div class="row">
+            <div class="col-md-3">
+                <img  class="imgs" (click)='likeBtn()' src="assets/images/thumbsup.png" alt="Thumbs Up">
+            </div>
+            <div class="col-md-9">
+                <p>{{likes}}</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
-        <p>{{dislikes}}</p>
-        <img class="imgs" (click)='dislikeBtn()' src="assets/thumbsdown.png" alt="Thumbs down">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="imgs" (click)='dislikeBtn()' src="assets/images/thumbsdown.png" alt="Thumbs down">
+            </div>
+            <div class="col-md-9">
+                <p>{{dislikes}}</p>
+            </div>
+        </div> 
     </div>
 </div>
-<br>
 <div>
     <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
 </div>
